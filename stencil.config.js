@@ -1,7 +1,7 @@
 exports.config = {
   publicPath: 'build',
   bundles: [
-    { components: ['my-name'] }
+    { components: ['paint-container', 'paint-canvas'] }
   ]
 };
 

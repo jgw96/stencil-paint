@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Stencil Starter App</title>
+  <title>StencilPaint</title>
   <script src="build/app.js"></script>
 </head>
-<body>
 
-  <my-name first="Stencil" last="JS"></my-name>
+<body style="margin: 0px; font-family: sans-serif;">
 
+  <paint-container></paint-container>
+
+  <script>
+    window.addEventListener('load', () => {
+      const canvas = document.querySelector('canvas');
+      document.body.addEventListener("touchstart", (e) => {
+        if (e.target == canvas) {
+          e.preventDefault();
+        }
+      }, {
+        passive: false
+      });
+      document.body.addEventListener("touchend", (e) => {
+        if (e.target == canvas) {
+          e.preventDefault();
+        }
+      }, {
+        passive: false
+      });
+      document.body.addEventListener("touchmove", (e) => {
+        if (e.target == canvas) {
+          e.preventDefault();
+        }
+      }, {
+        passive: false
+      });
+    });
+  </script>
 </body>
+
 </html>

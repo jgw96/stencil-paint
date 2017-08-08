@@ -1,0 +1,20 @@
+paint-canvas {
+  #clearDiv {
+    z-index: 9999;
+    position: absolute;
+    bottom: 60px;
+    right: 16px;
+
+    button {
+      border: none;
+      background: #607d8b;
+      color: white;
+      padding: 1em;
+      width: 8em;
+      text-transform: uppercase;
+      font-weight: bold;
+      border-radius: 5px;
+      outline: none;
+    }
+  }
+}

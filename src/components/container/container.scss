@@ -1,0 +1,33 @@
+paint-container {
+  footer {
+    position: fixed;
+    bottom: 0;
+    background: #607D8B;
+    width: 100%;
+    display: flex;
+    height: 3em;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    background: #607D8B;
+    width: 100%;
+    height: 2.8em;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+  }
+
+  #colorInput {
+    border: none;
+    background: transparent;
+    height: 2.4em;
+  }
+}
