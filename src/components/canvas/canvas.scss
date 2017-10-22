@@ -1,4 +1,4 @@
-paint-canvas {
+
   #clearDiv {
     z-index: 9999;
     position: absolute;
@@ -7,7 +7,26 @@ paint-canvas {
 
     button {
       border: none;
-      background: #607d8b;
+      background: #212121;
+      color: white;
+      padding: 1em;
+      width: 8em;
+      text-transform: uppercase;
+      font-weight: bold;
+      border-radius: 3px;
+      outline: none;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    }
+  }
+
+  #saveDiv {
+    position: absolute;
+    bottom: 60px;
+    left: 16px;
+
+    button {
+      border: none;
+      background: #212121;
       color: white;
       padding: 1em;
       width: 8em;
@@ -17,4 +36,3 @@ paint-canvas {
       outline: none;
     }
   }
-}

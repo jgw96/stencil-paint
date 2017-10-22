@@ -1,0 +1,13 @@
+{
+  "name": "StencilPaint",
+  "short_name": "StencilPaint",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [{
+    "src": "images/icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "background_color": "#0f2d3c",
+  "theme_color": "#0f2d3c"
+}

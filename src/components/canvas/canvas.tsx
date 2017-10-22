@@ -3,11 +3,13 @@ import { Component, State, Prop, Element } from '@stencil/core';
 
 @Component({
   tag: 'paint-canvas',
-  styleUrl: 'canvas.scss'
+  styleUrl: 'canvas.scss',
+  shadow: true
 })
 export class PaintCanvas {
 
   @Element() el: HTMLElement;
+
   @State() canvas: HTMLCanvasElement;
   @State() context: CanvasRenderingContext2D;
   @State() drawing: boolean;
@@ -15,6 +17,7 @@ export class PaintCanvas {
   @State() mousePos: any;
   @State() oldWidth: number;
   @State() oldColor: string;
+
   @Prop() color: string;
   @Prop() width: number;
 
@@ -32,7 +35,7 @@ export class PaintCanvas {
 
   ionViewDidLoad() {
     window.setTimeout(() => {
-      this.canvas = this.el.querySelector('canvas');
+      this.canvas = this.el.shadowRoot.querySelector('canvas');
       this.context = this.canvas.getContext('2d');
 
       // setup canvas

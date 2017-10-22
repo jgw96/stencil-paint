@@ -3,7 +3,8 @@ import { Component, Element, State } from '@stencil/core';
 
 @Component({
   tag: 'paint-container',
-  styleUrl: 'container.scss'
+  styleUrl: 'container.scss',
+  shadow: true
 })
 export class PaintContainer {
 

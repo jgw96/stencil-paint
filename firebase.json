@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "www",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "/",
+        "headers": [{"key": "Link", "value": "</build/app/app.gpsuqcrkyawe.js>;rel=preload;as=script,</build/app/vwkinzca79mx.js>;rel=preload;as=script,</build/app/padrxhw0pyzi.css>;rel=preload;as=style"}]
+      }
+    ]
+  }
+}
