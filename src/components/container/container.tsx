@@ -1,14 +1,12 @@
-import { Component, Element, State } from '@stencil/core';
+import { Component, State } from '@stencil/core';
 
 
 @Component({
   tag: 'paint-container',
-  styleUrl: 'container.scss',
-  shadow: true
+  styleUrl: 'container.scss'
 })
 export class PaintContainer {
 
-  @Element() el: HTMLElement;
   @State() colorValue: string;
   @State() widthValue: number;
 
@@ -37,21 +35,26 @@ export class PaintContainer {
         <paint-canvas color={this.colorValue} width={this.widthValue}></paint-canvas>,
 
         <footer>
-          <input id='colorInput' type='color' value={this.colorValue} onChange={() => this.handleColorChange(event)}></input>
-          <input id='rangeInput' type='range' value={this.widthValue} onChange={() => this.handleRangeChange(event)}></input>
+          <label>
+            <input id='colorInput' type='color' value={this.colorValue} onChange={() => this.handleColorChange(event)}></input>
+          </label>
+
+          <label>
+            <input id='rangeInput' type='range' value={this.widthValue} onChange={() => this.handleRangeChange(event)}></input>
+          </label>
         </footer>
       ]
     } else {
       return [
-      <header>
-        <span>StencilPaint</span>
-      </header>,
+        <header>
+          <span>StencilPaint</span>
+        </header>,
 
-      <footer>
-        <input id='colorInput' type='color' value={this.colorValue} onChange={() => this.handleColorChange(event)}></input>
-        <input id='rangeInput' type='range' value={this.widthValue} onChange={() => this.handleRangeChange(event)}></input>
-      </footer>
-    ]
+        <footer>
+          <input id='colorInput' type='color' value={this.colorValue} onChange={() => this.handleColorChange(event)}></input>
+          <input id='rangeInput' type='range' value={this.widthValue} onChange={() => this.handleRangeChange(event)}></input>
+        </footer>
+      ]
     }
   }
 }

@@ -10,16 +10,17 @@ export class PaintCanvas {
 
   @Element() el: HTMLElement;
 
-  @State() canvas: HTMLCanvasElement;
-  @State() context: CanvasRenderingContext2D;
   @State() drawing: boolean;
-  @State() lastPos: any;
-  @State() mousePos: any;
-  @State() oldWidth: number;
-  @State() oldColor: string;
 
   @Prop() color: string;
   @Prop() width: number;
+
+  canvas: HTMLCanvasElement;
+  context: CanvasRenderingContext2D;
+  lastPos: any;
+  mousePos: any;
+  oldWidth: number;
+  oldColor: string;
 
   ionViewWillUpdate() {
     console.log(this.width);
@@ -33,8 +34,8 @@ export class PaintCanvas {
     }
   }
 
-  ionViewDidLoad() {
-    window.setTimeout(() => {
+  componentDidLoad() {
+    // window.setTimeout(() => {
       this.canvas = this.el.shadowRoot.querySelector('canvas');
       this.context = this.canvas.getContext('2d');
 
@@ -60,9 +61,11 @@ export class PaintCanvas {
       this.setupMouseEvents();
       this.setupTouchEvents();
 
-      requestAnimationFrame(() => this.renderCanvas());
+      this.renderCanvas();
 
-    }, 10);
+      //requestAnimationFrame(() => this.renderCanvas());
+
+    // }, 10);
   }
 
   setupMouseEvents() {
@@ -72,22 +75,22 @@ export class PaintCanvas {
     this.lastPos = this.mousePos;
 
     // handle mouse events
-    this.canvas.addEventListener("mousedown", (e) => {
+    (this.canvas.addEventListener as any)("mousedown", (e) => {
       this.drawing = true;
       this.lastPos = this.getMousePos(this.canvas, e);
-    }, false);
+    }, { passive: true});
 
-    this.canvas.addEventListener("mouseup", () => {
+    (this.canvas.addEventListener as any)("mouseup", () => {
       this.drawing = false;
-    }, false);
+    }, { passive: true });
 
-    this.canvas.addEventListener("mousemove", (e) => {
+    (this.canvas.addEventListener as any)("mousemove", (e) => {
       this.mousePos = this.getMousePos(this.canvas, e);
-    }, false);
+    }, { passive: true });
   }
 
   setupTouchEvents() {
-    this.canvas.addEventListener("touchstart", (e) => {
+    (this.canvas.addEventListener as any)("touchstart", (e) => {
       this.mousePos = this.getTouchPos(this.canvas, e);
       const touch = e.touches[0];
 
@@ -97,14 +100,14 @@ export class PaintCanvas {
       });
 
       this.canvas.dispatchEvent(mouseEvent);
-    }, false);
+    }, { passive: true});
 
-    this.canvas.addEventListener("touchend", () => {
+    (this.canvas.addEventListener as any)("touchend", () => {
       const mouseEvent = new MouseEvent("mouseup", {});
       this.canvas.dispatchEvent(mouseEvent);
-    }, false);
+    }, { passive: true });
 
-    this.canvas.addEventListener("touchmove", (e) => {
+    (this.canvas.addEventListener as any)("touchmove", (e) => {
       const touch = e.touches[0];
 
       const mouseEvent = new MouseEvent("mousemove", {
@@ -113,7 +116,7 @@ export class PaintCanvas {
       });
 
       this.canvas.dispatchEvent(mouseEvent);
-    }, false);
+    }, { passive: true });
   }
 
   getMousePos(canvasDom, mouseEvent) {

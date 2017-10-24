@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>StencilPaint</title>
 
   <link rel='manifest' href='manifest.json'>
@@ -29,7 +29,7 @@
   <script src="build/app.js"></script>
 </head>
 
-<body style="margin: 0px; font-family: sans-serif; overflow-y: hidden;">
+<body style="margin: 0px; font-family: sans-serif; overflow: hidden; position: fixed;">
 
   <paint-container></paint-container>
 
@@ -41,21 +41,21 @@
           e.preventDefault();
         }
       }, {
-        passive: false
+        passive: true
       });
       document.body.addEventListener("touchend", (e) => {
         if (e.target == canvas) {
           e.preventDefault();
         }
       }, {
-        passive: false
+        passive: true
       });
       document.body.addEventListener("touchmove", (e) => {
         if (e.target == canvas) {
           e.preventDefault();
         }
       }, {
-        passive: false
+        passive: true
       });
     });
   </script>
