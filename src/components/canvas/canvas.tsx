@@ -37,6 +37,8 @@ export class PaintCanvas {
   componentDidLoad() {
     // window.setTimeout(() => {
       this.canvas = this.el.shadowRoot.querySelector('canvas');
+      // this.canvas = this.canvasToWrite;
+     //  console.log(this.canvas)
       this.context = this.canvas.getContext('2d');
 
       // setup canvas

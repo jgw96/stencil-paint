@@ -4,36 +4,6 @@
  * and imports for stencil collections that might be configured in your stencil.config.js file
  */
 
-import { AppToast as AppToast } from './components/app-toast/app-toast';
-
-interface HTMLAppToastElement extends AppToast, HTMLElement {
-}
-declare var HTMLAppToastElement: {
-  prototype: HTMLAppToastElement;
-  new (): HTMLAppToastElement;
-};
-declare global {
-  interface HTMLElementTagNameMap {
-      "app-toast": HTMLAppToastElement;
-  }
-  interface ElementTagNameMap {
-      "app-toast": HTMLAppToastElement;
-  }
-  namespace JSX {
-      interface IntrinsicElements {
-          "app-toast": JSXElements.AppToastAttributes;
-      }
-  }
-  namespace JSXElements {
-      export interface AppToastAttributes extends HTMLAttributes {
-          mode?: string,
-          color?: string,
-        
-          open?: boolean
-      }
-  }
-}
-
 import { PaintCanvas as PaintCanvas } from './components/canvas/canvas';
 
 interface HTMLPaintCanvasElement extends PaintCanvas, HTMLElement {
