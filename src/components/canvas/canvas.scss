@@ -1,38 +1,41 @@
 
-  #clearDiv {
-    z-index: 9999;
-    position: absolute;
-    bottom: 60px;
-    right: 16px;
-
-    button {
-      border: none;
-      background: #212121;
-      color: white;
-      padding: 1em;
-      width: 8em;
-      text-transform: uppercase;
-      font-weight: bold;
-      border-radius: 3px;
-      outline: none;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  paint-canvas {
+    #clearDiv {
+      z-index: 9999;
+      position: absolute;
+      bottom: 60px;
+      right: 16px;
+  
+      button {
+        border: none;
+        background: #212121;
+        color: white;
+        padding: 1em;
+        width: 8em;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 3px;
+        outline: none;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+      }
+    }
+  
+    #saveDiv {
+      position: absolute;
+      bottom: 60px;
+      left: 16px;
+  
+      button {
+        border: none;
+        background: #212121;
+        color: white;
+        padding: 1em;
+        width: 8em;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 5px;
+        outline: none;
+      }
     }
   }
 
-  #saveDiv {
-    position: absolute;
-    bottom: 60px;
-    left: 16px;
-
-    button {
-      border: none;
-      background: #212121;
-      color: white;
-      padding: 1em;
-      width: 8em;
-      text-transform: uppercase;
-      font-weight: bold;
-      border-radius: 5px;
-      outline: none;
-    }
-  }

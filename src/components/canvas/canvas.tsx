@@ -3,8 +3,7 @@ import { Component, State, Prop, Element } from '@stencil/core';
 
 @Component({
   tag: 'paint-canvas',
-  styleUrl: 'canvas.scss',
-  shadow: true
+  styleUrl: 'canvas.scss'
 })
 export class PaintCanvas {
 
@@ -14,6 +13,7 @@ export class PaintCanvas {
 
   @Prop() color: string;
   @Prop() width: number;
+  @Prop({ context: 'isServer' }) private isServer: boolean;
 
   canvas: HTMLCanvasElement;
   context: CanvasRenderingContext2D;
@@ -35,8 +35,8 @@ export class PaintCanvas {
   }
 
   componentDidLoad() {
-    // window.setTimeout(() => {
-      this.canvas = this.el.shadowRoot.querySelector('canvas');
+    if (!this.isServer) {
+      this.canvas = this.el.querySelector('canvas');
       // this.canvas = this.canvasToWrite;
      //  console.log(this.canvas)
       this.context = this.canvas.getContext('2d');
@@ -65,9 +65,7 @@ export class PaintCanvas {
 
       this.renderCanvas();
 
-      //requestAnimationFrame(() => this.renderCanvas());
-
-    // }, 10);
+    }
   }
 
   setupMouseEvents() {

@@ -3,8 +3,7 @@ import { Component, State } from '@stencil/core';
 
 @Component({
   tag: 'paint-container',
-  styleUrl: 'container.scss',
-  shadow: true
+  styleUrl: 'container.scss'
 })
 export class PaintContainer {
 
@@ -52,8 +51,12 @@ export class PaintContainer {
         </header>,
 
         <footer>
-          <input id='colorInput' type='color' value={this.colorValue} onChange={() => this.handleColorChange(event)}></input>
-          <input id='rangeInput' type='range' value={this.widthValue} onChange={() => this.handleRangeChange(event)}></input>
+          <label>
+            <input id='colorInput' type='color' value={this.colorValue} onChange={() => this.handleColorChange(event)}></input>
+          </label>
+          <label>
+            <input id='rangeInput' type='range' value={this.widthValue} onChange={() => this.handleRangeChange(event)}></input>
+          </label>
         </footer>
       ]
     }
