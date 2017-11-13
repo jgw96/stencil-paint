@@ -4,7 +4,10 @@
  * and imports for stencil collections that might be configured in your stencil.config.js file
  */
 
-import { PaintCanvas as PaintCanvas } from './components/canvas/canvas';
+
+import {
+  PaintCanvas as PaintCanvas
+} from './components/canvas/canvas';
 
 interface HTMLPaintCanvasElement extends PaintCanvas, HTMLElement {
 }
@@ -29,12 +32,16 @@ declare global {
           mode?: string,
           color?: string,
         
+          color?: string,
           width?: number
       }
   }
 }
 
-import { PaintContainer as PaintContainer } from './components/container/container';
+
+import {
+  PaintContainer as PaintContainer
+} from './components/container/container';
 
 interface HTMLPaintContainerElement extends PaintContainer, HTMLElement {
 }

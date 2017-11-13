@@ -3,7 +3,8 @@ import { Component, State, Prop, Element } from '@stencil/core';
 
 @Component({
   tag: 'paint-canvas',
-  styleUrl: 'canvas.scss'
+  styleUrl: 'canvas.scss',
+  shadow: true
 })
 export class PaintCanvas {
 
@@ -36,7 +37,7 @@ export class PaintCanvas {
 
   componentDidLoad() {
     if (!this.isServer) {
-      this.canvas = this.el.querySelector('canvas');
+      this.canvas = this.el.shadowRoot.querySelector('canvas');
       // this.canvas = this.canvasToWrite;
      //  console.log(this.canvas)
       this.context = this.canvas.getContext('2d');

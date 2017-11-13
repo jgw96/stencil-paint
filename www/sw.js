@@ -1,4 +1,4 @@
-importScripts('workbox-sw.prod.v2.1.0.js');
+importScripts('workbox-sw.prod.v2.1.1.js');
 
 /**
  * DO NOT EDIT THE FILE MANIFEST ENTRY
@@ -20,39 +20,51 @@ importScripts('workbox-sw.prod.v2.1.0.js');
 const fileManifest = [
   {
     "url": "build/app.js",
-    "revision": "3249ca63bf41c2cdff58b903c61e2a51"
+    "revision": "2db3d3646663fe7ac003052fe6d39c68"
   },
   {
-    "url": "build/app/app.eeqknnj9.pf.js",
-    "revision": "b9b89d3245ee367a3779cdf67d03e021"
+    "url": "build/app/app.e6vocpeo.js",
+    "revision": "fbb5b3ee805c7922b3495f058ce264a7"
   },
   {
-    "url": "build/app/app.enzuudpw.js",
-    "revision": "656f04fbc423867fefbc4bd93ede9635"
+    "url": "build/app/app.ir6lbt87.js",
+    "revision": "7b0b55d542c91465a782ecdebde94f38"
   },
   {
     "url": "build/app/app.registry.json",
-    "revision": "a4bb1ae5ba1ea6cd42dd4e3e024093c8"
+    "revision": "1ebdde678bcd7b2cfdc08ba56a111a86"
   },
   {
-    "url": "build/app/eozuhi0f.js",
-    "revision": "bd8b2f532f8497494983d105c7f60edf"
+    "url": "build/app/kofmvqu5.js",
+    "revision": "1782844d1e6569e90cb93c580ba2a78f"
   },
   {
-    "url": "build/app/fnza8xfs.js",
-    "revision": "5f6a242a14f627b66700d6402fab68f2"
+    "url": "build/app/kofmvqu5.sc.js",
+    "revision": "a0a24905447787d499c1e7ecde392035"
   },
   {
-    "url": "build/app/skufofuo.js",
-    "revision": "a8361744dfe9f7018d7383a42ce979b8"
+    "url": "build/app/oahpgvcj.js",
+    "revision": "6bb2f39944d9813f9143e73691edce07"
   },
   {
-    "url": "build/app/skufofuo.sc.js",
-    "revision": "36520b746608f95efabe6d1eeb120a5d"
+    "url": "build/app/oahpgvcj.sc.js",
+    "revision": "304b24f5b9f27f112cf341fe9e4df4ab"
   },
   {
     "url": "favicon.ico",
     "revision": "d2f619d796fbe8bed6200da2691aa5b6"
+  },
+  {
+    "url": "images/128.png",
+    "revision": "ddde94676da12362aba1533189b8b36d"
+  },
+  {
+    "url": "images/256.png",
+    "revision": "8cfd82c1b4684d2d2f00f5525cb6f157"
+  },
+  {
+    "url": "images/64.png",
+    "revision": "f30823021ba0174950e1d68830f8765e"
   },
   {
     "url": "images/icon.png",
@@ -60,15 +72,19 @@ const fileManifest = [
   },
   {
     "url": "index.html",
-    "revision": "441e13436df9df0c83ecf45897e60ef1"
+    "revision": "11579fc04d32124f1551f7adee0931db"
   },
   {
     "url": "manifest.json",
-    "revision": "46c1c1afb561781fa5d5a6bbb3b8a197"
+    "revision": "a37bc59ebb457e8195cda080f68dab12"
   },
   {
     "url": "workbox-sw.prod.v1.1.0.js",
     "revision": "df86dfc69c6d017722ecb8a16d34c849"
+  },
+  {
+    "url": "workbox-sw.prod.v2.1.0.js",
+    "revision": "e5f207838d7fd9c81835d5705a73cfa2"
   }
 ];
 

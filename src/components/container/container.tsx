@@ -3,7 +3,8 @@ import { Component, State } from '@stencil/core';
 
 @Component({
   tag: 'paint-container',
-  styleUrl: 'container.scss'
+  styleUrl: 'container.scss',
+  shadow: true
 })
 export class PaintContainer {
 
@@ -13,6 +14,8 @@ export class PaintContainer {
   constructor() {
     this.colorValue = '#ff0000';
     this.widthValue = 15;
+
+    console.log('hello world');
   }
 
   handleColorChange(ev: any) {
@@ -27,6 +30,7 @@ export class PaintContainer {
 
   render() {
     if (this.colorValue && this.widthValue) {
+      console.log('rendering')
       return [
         <header>
           <span>StencilPaint</span>
@@ -45,6 +49,7 @@ export class PaintContainer {
         </footer>
       ]
     } else {
+      console.log('rendering')
       return [
         <header>
           <span>StencilPaint</span>
